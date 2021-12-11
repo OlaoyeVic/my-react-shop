@@ -9,8 +9,9 @@ interface IProps {
 
 const ContactUs: React.FunctionComponent<IProps> = (props) => {
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    props.onNameChange(e.currentTarget.value);
-    return (...)
+    // props.onNameChange(e.currentTarget.value);
+    // return (...)
+    console.log(MessageChannel);
   };
   return (
     <form className="form" noValidate={true}>
