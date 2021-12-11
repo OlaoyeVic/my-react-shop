@@ -188,7 +188,7 @@ code {
 .form-group input,
 select,
 textarea {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   font-size: 16px;
   padding: 5px;
   border: lightgray solid 1px;
