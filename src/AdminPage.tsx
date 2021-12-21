@@ -5,7 +5,7 @@ const AdminPage: React.SFC = () =>{
     return(
         <div className="page-container">
             <h1>Admin Panel</h1>
-            <ul className="admin-section">
+            <ul className="admin-sections">
                 <li key="users">
                     <NavLink to ={`/admin/users`} activeClassName="admin-link-active">Users</NavLink>
                 </li>
