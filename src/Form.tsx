@@ -191,7 +191,7 @@ export class Form extends React.Component<IFormProps, IState> {
                                 onBlur={e => handleChange(e, context)}>
                                 {options && options.map(option => (
                                     <option key={option} value={option}>
-                                        {options}
+                                        {option}
                                     </option>
                                 ))}
                             </select>

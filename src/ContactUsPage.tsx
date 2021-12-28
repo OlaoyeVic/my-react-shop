@@ -11,15 +11,17 @@ interface IState {
 
 class ContactUsPage extends React.Component<{}, {}> {
   private handleSubmit = async (values: IValues): Promise<ISubmitResult> => {
-    await this.wait(1000)
+    const wait = (ms: number): Promise<void> => {
+      return new Promise(resolve => setTimeout(resolve, ms))
+    }
+
+    await wait(1000)
     return {
       success: true
     }
   }
 
-  const wait = (ms: number): Promise<void> => {
-    return new Promise(resolve => setTimeout(resolve, ms))
-  }
+
 
   public render() {
     return (
