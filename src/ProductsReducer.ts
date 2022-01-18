@@ -26,6 +26,13 @@ export const productsReducer: Reducer<IProductsState, ProductsActions> = (
                 productsLoading: false
             }
         }
+        case ProductsActionTypes.GETSINGLE: {
+            return {
+                ...state,
+                currentProduct: action.products,
+                productsLoading: false
+            }
+        }
     }
     return state
 }
