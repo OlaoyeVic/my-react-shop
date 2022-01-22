@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 import { IProduct } from './ProductData'
-import ProductsPage from './ProductsPage'
-import withLoader from './withLoader'
+import withLoader from "./withLoader"
 
 interface IProps {
     products?: IProduct[]
@@ -13,13 +12,11 @@ const ProductsList: React.FC<IProps> = props => {
     const search = props.search
     return (
         <ul className="product-list">
-            {props?.products.map(product => {
+            {props.products && props.products.map(product => {
                 if (
                     !search ||
                     (search &&
-                        product.name
-                            .toLowerCase()
-                            .indexOf(search.toLowerCase()) > -1)
+                        product.name.toLowerCase().indexOf(search.toLowerCase()) > -1)
                 ) {
                     return (
                         <li key={product.id} className="product-list-item">
@@ -35,4 +32,5 @@ const ProductsList: React.FC<IProps> = props => {
         </ul>
     )
 }
-export default withLoader(ProductsPage)
+
+export default withLoader(ProductsList);

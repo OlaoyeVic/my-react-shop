@@ -32,7 +32,7 @@ class ProductPage extends React.Component<IProps> {
     }
   }
   private handleAddClick = () => {
-    if (this.props.getProduct) {
+    if (this.props.product) {
       this.props.addToBasket(this.props.product)
     }
   };
